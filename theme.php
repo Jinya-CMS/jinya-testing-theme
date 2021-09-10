@@ -98,6 +98,11 @@ return [
                 'file2' => 'File 2',
                 'file3' => 'File 3',
             ],
+            'blog_categories' => [
+                'blogCategory1' => 'Category 1',
+                'blogCategory2' => 'Category 2',
+                'blogCategory3' => 'Category 3',
+            ],
         ],
     ],
 ];

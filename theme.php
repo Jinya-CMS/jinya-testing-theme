@@ -4,6 +4,7 @@ return [
     'displayName' => 'Jinya Testing Theme',
     'description' => "A simple theme for testing purposes. This theme has no real frontend so don't use it",
     'previewImage' => __DIR__ . '/Preview.jpg',
+    'errorBehavior' => \App\Theming\Theme::ERROR_BEHAVIOR_ERROR_PAGE,
     'styles' => [
         'variables' => __DIR__ . '/styles/_variables.scss',
         'files' => [
@@ -14,12 +15,10 @@ return [
         'asset1' => __DIR__ . '/assets/icons/facebook.svg',
         'asset2' => __DIR__ . '/assets/icons/pinterest.svg',
         'asset3' => __DIR__ . '/assets/icons/twitter.svg',
+        'poppins400Regular' => __DIR__ . '/assets/fonts/Poppins.latin.regular.woff2',
     ],
     'scripts' => [
-        __DIR__ . '/scripts/menu.dist.js',
-        __DIR__ . '/scripts/menu-mobile.dist.js',
-        __DIR__ . '/scripts/scrollhelper.dist.js',
-        __DIR__ . '/scripts/gallery-masonry.dist.js',
+        __DIR__ . '/scripts/helloworld.js',
     ],
     'configuration' => [
         'configGroup1' => [
@@ -28,7 +27,7 @@ return [
         'configGroup2' => [
             'text1' => 'Text value',
             'text2' => 'Text value',
-            'boolean1' => 'Boolean value',
+            'boolean1' => false,
         ],
     ],
     'configurationStructure' => [

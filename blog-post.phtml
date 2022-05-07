@@ -1,0 +1,20 @@
+<?php
+/**
+ * The file blog-post.phtml gets the variables below passed. The $post contains the post for this route.
+ */
+/** @var \App\Database\BlogPost $post */
+$this->layout('theme::layout', ['title' => $post->title]);
+?>
+<?php $this->start('maincontent') ?>
+    <div>
+        <?php if ($post->headerImageId !== null): ?>
+            <img src="<?= $post->getHeaderImage()->path ?>" alt="<?= $post->title ?>">
+        <?php endif ?>
+        <h1><?= $this->e($post->title) ?></h1>
+    </div>
+    <article>
+        <?php foreach ($post->getSegments() as $segment): ?>
+            <?php // Render the blog post segments ?>
+        <?php endforeach ?>
+    </article>
+<?php $this->stop('maincontent') ?>

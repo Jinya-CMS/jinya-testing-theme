@@ -5,7 +5,11 @@
  */
 /** @var \App\Database\BlogCategory $category */
 /** @var Iterator<\App\Database\BlogPost> $posts */
+
 /** @var \League\Plates\Template\Template $this */
+
+use App\Utils\ImageType;
+
 $this->layout('theme::layout', ['title' => $category->name]);
 ?>
 <?php $this->start('maincontent') ?>
@@ -15,7 +19,9 @@ $this->layout('theme::layout', ['title' => $category->name]);
         <a href="/<?= $post->createdAt->format('Y/m/d') ?>/<?= $this->e($post->slug) ?>">
             <span><?= $this->e($post->title) ?></span>
             <?php if ($post->headerImageId !== null): ?>
-                <img src="<?= $post->getHeaderImage()->path ?>" alt="<?= $this->e($post->title) ?>">
+                <img src="<?= $post->getHeaderImage()->path ?>" alt="<?= $this->e($post->title) ?>"
+                     sizes="<?= $this->sizes() ?>"
+                     srcset="<?= $this->srcset($post->getHeaderImage(), ImageType::Webp) ?>">
             <?php endif ?>
         </a>
     <?php endforeach ?>

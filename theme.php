@@ -2,7 +2,7 @@
 
 return [
     'displayName' => 'Jinya Testing Theme',
-    'description' => "A simple theme for testing purposes. This theme has no real frontend so don't use it",
+    'description' => ['en' => "A simple theme for testing purposes. This theme has no real frontend so don't use it"],
     'previewImage' => __DIR__ . '/Preview.jpg',
     'errorBehavior' => \App\Theming\Theme::ERROR_BEHAVIOR_ERROR_PAGE,
     'styles' => [
@@ -31,76 +31,75 @@ return [
         ],
     ],
     'configurationStructure' => [
-        'title' => 'Configure Jinya testing theme',
         'groups' => [
             [
                 'name' => 'configGroup1',
-                'title' => 'Config Group 1',
+                'title' => ['en' => 'Config Group 1'],
                 'fields' => [
                     [
                         'name' => 'text',
                         'type' => 'string',
-                        'label' => 'Text value 1',
+                        'label' => ['en' => 'Text value 1'],
                     ],
                 ],
             ],
             [
                 'name' => 'configGroup2',
-                'title' => 'Config Group 2',
+                'title' => ['en' => 'Config Group 2'],
                 'fields' => [
                     [
                         'name' => 'text1',
                         'type' => 'string',
-                        'label' => 'Text value 1',
+                        'label' => ['en' => 'Text value 1'],
                     ],
                     [
                         'name' => 'text2',
                         'type' => 'string',
-                        'label' => 'Text value 2',
+                        'label' => ['en' => 'Text value 2'],
                     ],
                     [
                         'name' => 'boolean1',
                         'type' => 'boolean',
-                        'label' => 'Boolean value 1',
+                        'label' => ['en' => 'Boolean value 1'],
                     ],
                 ],
             ],
         ],
         'links' => [
             'segment_pages' => [
-                'segmentPage1' => 'Segment Page 1',
-                'segmentPage2' => 'Segment Page 2',
-                'segmentPage3' => 'Segment Page 3',
+                'segmentPage1' => ['en' => 'Segment Page 1'],
+                'segmentPage2' => ['en' => 'Segment Page 2'],
+                'segmentPage3' => ['en' => 'Segment Page 3'],
             ],
             'menus' => [
-                'menu1' => 'Menu 1',
-                'menu2' => 'Menu 2',
-                'menu3' => 'Menu 3',
+                'menu1' => ['en' => 'Menu 1'],
+                'menu2' => ['en' => 'Menu 2'],
+                'menu3' => ['en' => 'Menu 3'],
             ],
             'pages' => [
-                'page1' => 'Page 1',
-                'page2' => 'Page 2',
-                'page3' => 'Page 3',
+                'page1' => ['en' => 'Page 1'],
+                'page2' => ['en' => 'Page 2'],
+                'page3' => ['en' => 'Page 3'],
             ],
             'forms' => [
-                'form1' => 'Form 1',
-                'form2' => 'Form 2',
-                'form3' => 'Form 3',
+                'form1' => ['en' => 'Form 1'],
+                'form2' => ['en' => 'Form 2'],
+                'form3' => ['en' => 'Form 3'],
             ],
             'galleries' => [
-                'gallery1' => 'Gallery 1',
-                'gallery2' => 'Gallery 2',
-                'gallery3' => 'Gallery 3',
+                'gallery1' => ['en' => 'Gallery 1'],
+                'gallery2' => ['en' => 'Gallery 2'],
+                'gallery3' => ['en' => 'Gallery 3'],
             ],
             'files' => [
-                'file1' => 'File 1',
-                'file2' => 'File 2',
-                'file3' => 'File 3',
+                'file1' => ['en' => 'File 1'],
+                'file2' => ['en' => 'File 2'],
+                'file3' => ['en' => 'File 3'],
             ],
             'blog_categories' => [
-                'blogCategory1' => 'Category 1',
-                'blogCategory2' => 'Category 2',
-                'blogCategory3' => 'Category 3',
+                'blogCategory1' => ['en' => 'Category 1'],
+                'blogCategory2' => ['en' => 'Category 2'],
+                'blogCategory3' => ['en' => 'Category 3'],
             ],
         ],
     ],

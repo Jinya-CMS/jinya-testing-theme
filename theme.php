@@ -1,10 +1,12 @@
 <?php
 
+use Jinya\Cms\Theming\Theme;
+
 return [
     'displayName' => 'Jinya Testing Theme',
     'description' => ['en' => "A simple theme for testing purposes. This theme has no real frontend so don't use it"],
     'previewImage' => __DIR__ . '/Preview.jpg',
-    'errorBehavior' => \App\Theming\Theme::ERROR_BEHAVIOR_ERROR_PAGE,
+    'errorBehavior' => Theme::ERROR_BEHAVIOR_ERROR_PAGE,
     'styles' => [
         'variables' => __DIR__ . '/styles/_variables.scss',
         'files' => [
@@ -66,10 +68,10 @@ return [
             ],
         ],
         'links' => [
-            'segment_pages' => [
-                'segmentPage1' => ['en' => 'Segment Page 1'],
-                'segmentPage2' => ['en' => 'Segment Page 2'],
-                'segmentPage3' => ['en' => 'Segment Page 3'],
+            'section_pages' => [
+                'ModernPage1' => ['en' => 'Segment Page 1'],
+                'ModernPage2' => ['en' => 'Segment Page 2'],
+                'ModernPage3' => ['en' => 'Segment Page 3'],
             ],
             'menus' => [
                 'menu1' => ['en' => 'Menu 1'],

@@ -3,23 +3,31 @@
  * The file blog-post.phtml gets the variables below passed. The $post contains the post for this route.
  */
 
-/** @var \App\Database\BlogPost $post */
+/** @var BlogPost $post */
 
-use App\Utils\ImageType;
+use Jinya\Cms\Database\BlogPost;
+use Jinya\Cms\Utils\ImageType;
 
 $this->layout('theme::layout', ['title' => $post->title]);
 ?>
-<?php $this->start('maincontent') ?>
-    <div>
-        <?php if ($post->headerImageId !== null): ?>
-            <img src="<?= $post->getHeaderImage()->path ?>" alt="<?= $post->title ?>" sizes="<?= $this->sizes() ?>"
-                 srcset="<?= $this->srcset($post->getHeaderImage(), ImageType::Webp) ?>">
-        <?php endif ?>
-        <h1><?= $this->e($post->title) ?></h1>
-    </div>
-    <article>
-        <?php foreach ($post->getSegments() as $segment): ?>
-            <?php // Render the blog post segments ?>
-        <?php endforeach ?>
-    </article>
-<?php $this->stop('maincontent') ?>
+<?php
+$this->start('maincontent') ?>
+<div>
+    <?php
+    if ($post->headerImageId !== null): ?>
+        <img src="<?= $post->getHeaderImage()->path ?>" alt="<?= $post->title ?>" sizes="<?= $this->sizes() ?>"
+             srcset="<?= $this->srcset($post->getHeaderImage(), ImageType::Webp) ?>">
+    <?php
+    endif ?>
+    <h1><?= $this->e($post->title) ?></h1>
+</div>
+<article>
+    <?php
+    foreach ($post->getSections() as $section): ?>
+        <?php
+        // Render the blog post segments?>
+    <?php
+    endforeach ?>
+</article>
+<?php
+$this->stop('maincontent') ?>
